@@ -1,0 +1,74 @@
+﻿<Page
+    x:Class="pocket1.Pages.Locations"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:pocket1"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+
+    <ScrollViewer Height="400">
+        
+        <Grid VerticalAlignment="Stretch" Height="Auto" Margin="0,0,0,0">
+            <Grid VerticalAlignment="Top" Height="80" Margin="15">
+                <TextBlock x:Name ="clothtxt" Text ="Know your location today" HorizontalAlignment="Center" FontSize="50" VerticalAlignment="Top" FontFamily="Constantia" FontStretch="ExtraCondensed" FontWeight="Bold" FocusVisualPrimaryBrush="#FFF1D0D0" Foreground="DarkGoldenrod" Height="103" Margin="0,-11,0,0"/>
+            </Grid>
+
+
+            <GridView Name ="CityItemGrid"
+       ItemsSource="{x:Bind CityItems}"
+            HorizontalAlignment="Stretch" Margin=" 10, 0, 0, 0" SelectionChanged="CityItemGrid_SelectionChanged">
+
+                <GridView.ItemTemplate>
+                    <DataTemplate x:DataType="local:CityItem">
+                        <Grid Background="DarkRed" 
+                         Margin="8" Height="Auto" Width="400">
+
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+
+                            </Grid.RowDefinitions>
+                            <Image Name =" MyImage"
+                               Source= "{x:Bind image}"/>
+                            <StackPanel Grid.Row="1" Margin="10" >
+                                <TextBlock Text= "{x:Bind name}"
+                                       Name="NameTxt"
+                                       FontSize="20" FontFamily="serif" Foreground="DarkRed" TextWrapping="Wrap"/>
+                                <TextBlock Text= "{x:Bind founder}"
+                                       Name =" founderTxt" FontSize="20" FontFamily="serif" Foreground="DarkRed" TextWrapping="Wrap"/>
+
+                                <TextBlock Text= "{x:Bind capital}"
+                                       Name ="capitalTxt"  FontSize="20" FontFamily="serif" Foreground="DarkRed" TextWrapping="Wrap"/>
+
+                                <TextBlock Text= "{x:Bind population}"
+                                       Name =" populationTxt" FontSize="20" FontFamily="serif" Foreground="DarkRed" TextWrapping="Wrap"/>
+
+                                <TextBlock Text= "{x:Bind area}"
+                                       Name =" areaTxt" FontSize="20" FontFamily="serif" Foreground="DarkRed" TextWrapping="Wrap"/>
+
+                                <TextBlock Text= "{x:Bind attraction}"
+                                       Name ="attractionTxt"  FontSize="20" FontFamily="serif" Foreground="DarkRed" TextWrapping="Wrap"/>
+
+                                <TextBlock Text= "{x:Bind mayor}"
+                                       Name =" mayorTxt"  FontSize="20" FontFamily="serif" Foreground="DarkRed" TextWrapping="Wrap"/>
+
+                                <TextBlock Text= "{x:Bind favfood}"
+                                       Name =" favfoodTxt" FontSize="20" FontFamily="serif" Foreground="DarkRed" TextWrapping="Wrap"/>
+
+
+
+                            </StackPanel>
+
+                        </Grid>
+                    </DataTemplate>
+
+                </GridView.ItemTemplate>
+
+            </GridView>
+        </Grid>
+
+       
+    </ScrollViewer>
+</Page>

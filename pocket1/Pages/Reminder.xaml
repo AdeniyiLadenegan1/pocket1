@@ -1,0 +1,36 @@
+﻿<Page
+    x:Class="pocket1.Pages.Reminder"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:pocket1.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+
+    <ScrollViewer Height="600">
+    <StackPanel HorizontalAlignment="Center" Width="1131">
+        <StackPanel.Background>
+            <ImageBrush ImageSource="/Assets/img/sky3.jpg"/>
+        </StackPanel.Background>
+        <TextBlock Margin="25"  Foreground="#FF5B0303" Text ="Contact us" HorizontalAlignment="Center" Width="500" FontSize="50" VerticalAlignment="Center" FocusVisualPrimaryBrush="#FF150404"/>
+        <TextBox x:Name="Name" Margin="15" Width="500" Height="50" PlaceholderText ="Your Full name" HorizontalAlignment="Center" FontSize="25" VerticalAlignment="Center" Background="#66F99E43"/>
+        <TextBox x:Name="Email" Margin="15" Width="500" Height="50" PlaceholderText ="Your email" HorizontalAlignment="Center" FontSize="25" VerticalAlignment="Center" Background="#66C1274A"/>
+        <TextBox x:Name="Phone" Margin="15" Width="500" Height="50" PlaceholderText ="Your Phone number" HorizontalAlignment="Center" FontSize="25" VerticalAlignment="Center" Background="#66E0DBF9"/>
+        <TextBox x:Name="Subject" Margin="15" Width="500" Height="50" PlaceholderText ="Subject" Background="#FFA1E84C" HorizontalAlignment="Center" FontSize="25" VerticalAlignment="Center"/>
+        <TextBox x:Name ="Message" Margin="15" Width="500" Height ="100" PlaceholderText ="Your Message" Background="Aqua" HorizontalAlignment="Center" FontSize="25" VerticalAlignment="Center"/>
+        <Button Click="Send" Margin="10" Width ="200" HorizontalAlignment="Center" FontSize="30" Content="SEND">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFB4EEFB"/>
+                    <GradientStop Color="#FF380702" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+    </StackPanel>
+
+    </ScrollViewer>
+</Page>
+
+

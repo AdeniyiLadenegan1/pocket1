@@ -1,0 +1,38 @@
+﻿<Page
+    x:Class="pocket1.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:pocket1"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <RelativePanel HorizontalAlignment="Center" Padding="20">
+        <Grid Background="DeepSkyBlue">
+        <Grid.RowDefinitions>
+
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+           
+        <StackPanel x:Name="menu" Orientation="Horizontal" HorizontalAlignment="Center" Margin="30">
+            <Button Click="OpenPage1" Content="Home" x:Name="p1btn"/>
+            <Button Click="OpenPage2" Content="City" x:Name="p2btn"/>
+            <Button Click="OpenPage3" Content="Locations" x:Name="p3btn"/>
+            <Button Click="OpenPage4" Content="Trivia" x:Name="p4btn"/>
+            <Button Click="OpenPage5" Content="Reminder" x:Name="p5btn"/>
+            <Button Click="OpenPage6" Content="Journey" x:Name="p6btn"/>
+        </StackPanel>
+
+        
+            <Frame x:Name="Doors" Grid.Row="1">
+
+        </Frame>
+
+    </Grid>
+
+            
+    </RelativePanel>
+</Page>
